@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Apptest.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dateTimetoString="clr-namespace:Apptest;assembly=Apptest">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <dateTimetoString:BoolToColorConverter x:Key="BooltoColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label
+            x:Name="MyLabel"
+            Text="{Binding isAdultt}"
+            TextColor="Black">
+            <Label.BackgroundColor>
+                <MultiBinding Converter="{StaticResource BooltoColorConverter}">
+                    <Binding Path="isAdultt" />
+                    <Binding Path="favouriteColorr" />
+                    <Binding Path="leastfavouritee" />
+                </MultiBinding>
+            </Label.BackgroundColor>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
