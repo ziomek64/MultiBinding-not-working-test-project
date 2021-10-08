@@ -3,11 +3,11 @@
     x:Class="Apptest.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:dateTimetoString="clr-namespace:Apptest;assembly=Apptest">
+    xmlns:BoolToColorConverter="clr-namespace:Apptest;assembly=Apptest">
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <dateTimetoString:BoolToColorConverter x:Key="BooltoColorConverter" />
+            <BoolToColorConverter:BoolToColorConverter x:Key="BooltoColorConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
